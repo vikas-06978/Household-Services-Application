@@ -1,0 +1,246 @@
+.auth-container {
+  display: flex;
+  width: 55%;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e2e;
+  padding: 35px;
+  margin: 50px auto 20px auto;
+  border-radius: 20px;
+  gap: 80px;
+}
+
+/* Image Slider */
+.image-slider {
+  width: 60%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-slider .slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s;
+  border-radius: 20px;
+  max-height: 70vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.image-slider .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.image-slider .slider-text {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Form Container */
+.form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #2b2b3d;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.form-container h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  font-family: "Open Sans", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Form Fields */
+.form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-container input,
+.form-container select {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-container input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: 2px solid #7c3aed;
+}
+
+/* Button */
+.form-container button {
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+  background: #6b21a8;
+  transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Link Styling */
+p {
+  color: #a78bfa;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+  font-size: 14px;
+}
+
+p:hover {
+  color: #c4b5fd;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .auth-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 25px;
+    gap: 30px;
+    height: auto;
+  }
+
+  .image-slider {
+    width: 100%;
+    height: 250px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .form-title,
+  .title-text {
+    font-size: 20px;
+  }
+
+  .form-container button:hover {
+    box-shadow: 0 0 10px #7c3aed80;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container input,
+  .form-container select,
+  .form-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-title,
+  .title-text {
+    font-size: 18px;
+  }
+
+  .slider-text {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
+.slider-text.short-tagline {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 6px 14px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  white-space: nowrap;
+  margin-top: 215px;
+}
+
+@media (max-width: 768px) {
+  .slider-text.short-tagline {
+    font-size: 0.9rem;
+    padding: 4px 12px;
+  }
+}

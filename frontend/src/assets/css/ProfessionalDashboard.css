@@ -1,0 +1,113 @@
+.professional-dashboard {
+  margin-top: 100px;
+  color: var(--text-color);
+  padding-bottom: 60px;
+}
+
+.header,
+.dashboard-title,
+.header h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  margin-bottom: 1.2rem;
+}
+
+.section-heading {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-sub,
+.why-professionals p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  max-width: 480px;
+  margin: 0 auto 12px;
+}
+
+.why-professionals h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+/* Navigation Tabs */
+.nav-tabs .nav-link {
+  cursor: pointer;
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #e6e6e6;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link.active {
+  background-color: #444;
+  color: #fff;
+  border-color: #666;
+}
+
+/* Tables */
+.table {
+  background-color: var(--table-bg);
+  color: var(--text-color);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--table-hover);
+}
+
+/* Alerts */
+.alert {
+  background-color: var(--alert-bg);
+  color: var(--text-color);
+  border: 1px solid #ccc;
+}
+
+[data-theme="dark"] .alert {
+  border-color: #555;
+}
+
+/* Workflow Cards */
+.workflow-step {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workflow-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.workflow-step img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+.workflow-section .workflow-icon {
+  width: 48px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.workflow-section p {
+  color: var(--primary-text);
+  font-size: 0.95rem;
+}
+
+.professional-dashboard .table-section {
+  margin-top: 3rem; /* Adjust this value if needed */
+}

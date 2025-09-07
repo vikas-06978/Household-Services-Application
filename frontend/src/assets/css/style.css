@@ -1,0 +1,99 @@
+/* Light Theme (default) */
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f5f5f5;
+  --section-bg: #ffffff;
+  --card-bg: #f9fafb;
+  --modal-bg: #ffffff;
+
+  --table-header-bg: #007bff;
+  --table-row-bg: #ffffff;
+
+  --primary-text: #1a202c;
+  --text-color: #1a202c;
+  --accent-color: #3498db;
+
+  --btn-bg: #007bff;
+  --btn-hover-bg: #0056b3;
+  --btn-text: #ffffff;
+
+  --hover-bg: rgba(52, 152, 219, 0.1);
+  --active-bg: rgba(52, 152, 219, 0.15);
+
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.12);
+
+  --section-border: rgba(0, 0, 0, 0.08);
+
+  --table-bg: #fff;
+  --table-hover: #f1f1f1;
+  --sidebar-bg: #f8f9fa;
+  --thead-bg: #f8f8f8;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --section-bg: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --modal-bg: #2b2b2b;
+
+  --table-header-bg: #2563eb;
+  --table-row-bg: #1a1a1a;
+
+  --primary-text: #ffffff;
+  --text-color: #f1f1f1;
+  --accent-color: #90caf9;
+
+  --btn-bg: #2563eb;
+  --btn-hover-bg: #1e40af;
+  --btn-text: #ffffff;
+
+  --hover-bg: rgba(144, 202, 249, 0.15);
+  --active-bg: rgba(144, 202, 249, 0.25);
+
+  --card-bg: #1e1e1e;
+  --card-border: rgba(255, 255, 255, 0.08);
+
+  --table-bg: #1e1e1e;
+  --table-hover: #2c2c2c;
+  --sidebar-bg: #1a1a1a;
+  --thead-bg: #2b2b2b;
+}
+
+/* table header + dropdown in dark mode */
+[data-theme="dark"] .requests-table th {
+  background-color: var(--thead-bg);
+  color: var(--primary-text);
+}
+
+[data-theme="dark"] .requests-table td {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .navbar-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .navbar-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* dropdown text in all themes */
+select,
+select option,
+.status-dropdown,
+.status-dropdown option {
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+}
+
+/* Global Styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}

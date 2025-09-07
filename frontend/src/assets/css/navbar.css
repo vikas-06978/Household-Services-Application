@@ -1,0 +1,147 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid var(--section-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Platform Name (Logo) */
+.platform-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--primary-text);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.platform-name:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Navbar Items */
+.navbar-nav {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar-nav .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: var(--primary-text) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+  background-color: var(--hover-bg);
+  color: var(--accent-color) !important;
+}
+
+.navbar-nav .router-link-exact-active {
+  background-color: var(--active-bg);
+  color: var(--accent-color) !important;
+  font-weight: 700;
+}
+
+/* User Controls (right side) */
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+}
+
+/*  Profile Greeting */
+.profile-text1 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+/* Profile Link */
+.profile-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--primary-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.profile-text:hover {
+  color: var(--accent-color);
+}
+
+.profile-text .arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.profile-text:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-text);
+  color: var(--primary-text);
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--btn-text);
+}
+
+/*  Responsive for Tablets and Mobiles */
+@media (max-width: 1024px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .user-controls {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,588 @@
+.customer-dashboard {
+  margin-top: 100px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--primary-text);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.dashboard-menu h2 {
+  margin-bottom: 15px;
+}
+
+.dashboard-menu ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.dashboard-menu ul li {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--card-border);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard-menu ul li.active {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.dashboard-menu ul li:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Main */
+.main-content {
+  padding: 20px;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--card-border);
+  vertical-align: middle;
+}
+
+.table thead {
+  background-color: var(--thead-bg);
+  font-weight: 600;
+}
+
+.table td:last-child {
+  text-align: center;
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--table-hover);
+  color: var(--primary-text);
+  transition: background-color 0.3s ease;
+}
+
+/* Filter & Search */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-input,
+.price-input,
+select.form-select,
+.order-dropdown,
+.status-dropdown,
+input[type="date"] {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background-color: var(--section-bg);
+  color: var(--primary-text);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+select option {
+  color: #000;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  color: var(--primary-text);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.modal-content label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background-color: var(--section-bg);
+  color: var(--primary-text);
+  margin-bottom: 18px;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover-bg);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.btn-success {
+  background-color: #22c55e;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #16a34a;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 10px;
+  margin-top: 16px; /* Added spacing */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  background-color: var(--btn-hover-bg);
+  transform: scale(1.02);
+}
+
+.professionals-box {
+  background-color: var(--section-bg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  color: var(--primary-text);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-content .modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Premium Section */
+.premium-section {
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  border-left: 6px solid var(--btn-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.premium-section h2 {
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.premium-badge {
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.premium-subtext {
+  color: var(--subtle-text);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.premium-features .feature-box {
+  background-color: var(--feature-bg);
+  border: 1px solid var(--card-border);
+  color: var(--primary-text);
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.premium-features .feature-box.disabled {
+  opacity: 0.5;
+}
+
+.usage-card {
+  background-color: var(--feature-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--card-border);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.usage-card h6 {
+  color: var(--subtle-text);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.usage-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.premium-testimonial {
+  background-color: var(--feature-bg);
+  border: 1px solid var(--card-border);
+  color: var(--primary-text);
+  font-style: italic;
+  padding: 1rem;
+  border-left: 4px solid var(--btn-bg);
+  margin-top: 1.5rem;
+  border-radius: 8px;
+}
+
+.premium-actions .btn {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+}
+
+.premium-actions .btn-warning {
+  background-color: #facc15;
+  color: #111827;
+  border: none;
+}
+
+.premium-actions .btn-warning:hover {
+  background-color: #eab308;
+}
+
+.premium-actions .btn-outline-primary {
+  border: 2px solid var(--btn-bg);
+  color: var(--btn-bg);
+  background-color: transparent;
+}
+
+.premium-actions .btn-outline-primary:hover {
+  background-color: var(--btn-bg);
+  color: white;
+}
+
+/* Premium Section Styling */
+.subscription-section {
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid var(--accent-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Section Title */
+.subscription-section h2 {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Info/Badge */
+.subscription-section .badge {
+  background-color: #0dcaf0;
+  color: #000;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Feature Cards */
+.subscription-section .feature-card {
+  background-color: var(--section-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--card-border);
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* Usage Cards */
+.subscription-section .usage-card {
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--card-border);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+/* Testimonial */
+.subscription-section .testimonial {
+  font-style: italic;
+  padding: 1rem;
+  border: 1px solid var(--accent-color);
+  background-color: var(--section-bg);
+  color: var(--primary-text);
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+/* Action Buttons */
+.subscription-section .btn {
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscription-section .btn-warning {
+  background-color: #facc15;
+  color: #000;
+}
+
+.subscription-section .btn-warning:hover {
+  background-color: #eab308;
+}
+
+.subscription-section .btn-outline-primary {
+  border: 2px solid var(--btn-bg);
+  color: var(--btn-bg);
+  background-color: transparent;
+}
+
+.subscription-section .btn-outline-primary:hover {
+  background-color: var(--btn-bg);
+  color: #fff;
+}
+
+.subscription-section h5 {
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.premium-feature {
+  background-color: var(--card-bg);
+  color: black;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+.premium-badge {
+  background-color: #17a2b8;
+  color: #000 !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.usage-card {
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+.testimonial-box {
+  background-color: var(--section-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--accent-color);
+  padding: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.subscription-btn {
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.subscription-btn.renew {
+  background-color: #facc15;
+  color: #000;
+}
+.subscription-btn.renew:hover {
+  background-color: #eab308;
+}
+
+.subscription-btn.manage {
+  background-color: transparent;
+  border: 2px solid var(--btn-bg);
+  color: var(--btn-bg);
+}
+.subscription-btn.manage:hover {
+  background-color: var(--btn-bg);
+  color: white;
+}
+
+.quote {
+  font-size: 0.95rem;
+  color: var(--accent-color);
+}
+.quick-tips {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.quick-tips h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+}
+
+.quick-tips ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.quick-tips li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}

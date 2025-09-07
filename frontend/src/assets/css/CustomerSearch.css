@@ -1,0 +1,150 @@
+.customer-request-search {
+  padding: 1rem;
+  margin-top: 124px;
+}
+
+/* Filters row */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.date-label,
+.status-label {
+  font-weight: bold;
+}
+
+.date-input,
+.status-dropdown {
+  margin-left: 0.5rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.status-dropdown {
+  background-color: #fff;
+  color: #000;
+}
+
+.status-dropdown option {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Table */
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.requests-table th,
+.requests-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.requests-table th {
+  background-color: #f4f4f4;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover-bg);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.customer-request-search {
+  padding: 1.5rem;
+  margin-top: 124px;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  transition: all 0.3s ease;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+}
+
+.date-label,
+.status-label {
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.date-input,
+.status-dropdown {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--primary-text);
+}
+
+/* Table */
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--table-bg);
+}
+
+.requests-table th,
+.requests-table td {
+  border: 1px solid var(--card-border);
+  padding: 0.6rem;
+  text-align: left;
+  color: var(--primary-text);
+}
+
+.requests-table th {
+  background-color: var(--thead-bg);
+  color: var(--primary-text);
+}
+
+.requests-table tbody tr:hover {
+  background-color: var(--hover-bg);
+}
