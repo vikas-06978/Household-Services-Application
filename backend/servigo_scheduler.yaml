@@ -1,0 +1,29 @@
+operations:
+  notify_pending:
+    operation: "new_tasks.notify_pending"
+    # time:
+    #   mode: "cron"        
+    #   hour: 21
+    #   minute: 0
+    time:
+      mode: "interval"    
+      interval_sec: 60  # Every 60 seconds, It'll check ifthere are pending notifications to send.
+    retry:
+      count: 3
+      backoff: true
+
+  customer_summary:
+    operation: "new_tasks.dispatch_customer_summary"
+    # time:
+    #   mode: "cron"        
+    #   day_of_month: 1
+    #   hour: 19
+    #   minute: 30
+    time:
+      mode: "interval"    
+      interval_sec: 120 # same will check for 120 seconds
+    retry:
+      count: 3
+      backoff: true
+
+
